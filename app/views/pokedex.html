@@ -1,0 +1,20 @@
+<div class="row pokemons">
+	<div class="col-xs-4 pokemonData" ng-repeat="pokemon in pokemons">
+        <a href="#/pokemon/{{ pokemon.id }}" class="pokemon-link">
+            <div class="text-center">
+                <img ng-src="http://pokeapi.co/media/sprites/pokemon/{{ pokemon.id }}.png" alt="{{ pokemon.name }}" />
+            </div>
+            <div class="text-center text-capitalize">
+                <p>{{ pokemon.name }}</p>
+                <p>#{{ pokemon.id }}</p>
+            </div>
+        </a>
+	</div>
+</div>
+
+<div class="row">
+    <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</div>

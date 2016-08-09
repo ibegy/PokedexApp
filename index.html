@@ -1,0 +1,68 @@
+﻿ <!DOCTYPE html>
+<html lang="en" ng-app="pokedex">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokédex</title>
+
+    <!------- Styles ------->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
+    <!-- Custom style -->
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+<body ng-controller="IndexController">
+    <nav class="navbar navbar-inverse navbar-fixed-top xs">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+                <a class="navbar-brand" href="#/">Pokédex</a>
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="nav navbar-nav">
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#/">Home</a></li>
+                    <li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#/my-pokemons">My Pokékons</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page main content -->
+ 
+    <div class="container main-content">
+        <ng-view></ng-view> <!-- view -->
+    </div>
+
+    <!------- Scripts ------->
+    <!-- jQuery -->
+    <script src="lib/jquery/jquery-3.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Angular -->
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular/angular-route.min.js"></script>
+
+    <!-- Application instance -->
+    <script src="app/app.js"></script>
+
+    <!-- Services -->
+    <script src="app/services/pokemonService.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/controllers/indexController.js"></script>
+    <script src="app/controllers/pokedexController.js"></script>
+    <script src="app/controllers/pokemonController.js"></script>
+    <script src="app/controllers/myPokemonsController.js"></script>
+</body>
+</html>
